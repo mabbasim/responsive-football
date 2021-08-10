@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /*-------------------
-      body
+      body style
 --------------------*/
 body {
   font-family: "Poppins", sans-serif;
@@ -15,7 +15,7 @@ body {
 }
 
 /*------------------------------
-        header section
+        header style
 -------------------------------*/
 header {
   background-color: #2d25a0;
@@ -25,12 +25,14 @@ header:hover .banner {
   transform: scale(1.2, 1.2);
   transition: transform 1s ease-in-out;
 }
+
 .nav-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
+
 .menu-bar ul {
   display: flex;
   flex-direction: row;
@@ -68,7 +70,7 @@ header:hover .banner {
   padding-right: 8px;
 }
 /*-------------------------------
-         top area
+       top-area style
 ---------------------------- */
 .topper-area {
   display: grid;
@@ -114,10 +116,6 @@ header:hover .banner {
 .player-img img {
   width: 100%;
 }
-.player-info {
-  display: flex;
-  flex-direction: column;
-}
 .player-name {
   font-size: 28px;
   font-weight: 700;
@@ -129,7 +127,7 @@ header:hover .banner {
 }
 
 /* ---------------------------------
-            footer
+          footer style
 --------------------------------- */
 footer {
   padding-top: 160px;
@@ -161,4 +159,48 @@ footer {
   color: #000000;
   font-weight: normal;
   font-size: 18px;
+}
+
+/*------------------------------------
+          Media Queries 
+ -------------------------------------*/
+
+/* mobile responsive */
+@media only screen and (max-width: 668px) {
+  .topper-area {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 49px;
+    padding-bottom: 86px;
+    /* margin: 0; */
+  }
+  .top-info {
+    padding-bottom: 50px;
+    margin: 0;
+  }
+  .top-info h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .banner {
+    transition: padding-left 1s ease-in-out;
+  }
+  .banner img {
+    width: 329px;
+    height: 259px;
+  }
+  header:hover .banner {
+    padding-left: 50px;
+  }
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 24px;
+  }
+  .player {
+    width: 300px;
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
